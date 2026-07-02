@@ -251,6 +251,40 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+  .exp-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+  }
+  .exp-head { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.25rem; }
+  .exp-icon {
+    width: 52px; height: 52px; min-width: 52px;
+    background: var(--accent-light);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .exp-icon svg { width: 26px; height: 26px; color: var(--accent); }
+  .exp-titles h3 { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--ink); letter-spacing: -0.01em; margin-bottom: 4px; }
+  .exp-company { font-size: 0.9rem; color: var(--slate); margin-bottom: 2px; }
+  .exp-date { font-size: 0.82rem; color: var(--muted); font-weight: 500; }
+  .exp-list { list-style: none; margin: 0; padding: 0; }
+  .exp-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+  .exp-list li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 9px;
+    width: 7px; height: 7px;
+    background: var(--accent-mid);
+    border-radius: 50%;
+  }
   .project-card {
     background: var(--white);
     border: 1px solid var(--border);
@@ -420,6 +454,7 @@
     .hero-card::after { display: none; }
     .project-card { grid-template-columns: 1fr; }
     .project-img { min-height: 160px; height: 160px; }
+    .exp-card { padding: 1.25rem; }
   }
 </style>
 </head>
@@ -430,6 +465,7 @@
   <a href="#" class="nav-logo">Haziq.</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -443,8 +479,8 @@
     <h1 class="hero-name">Mohammad<br/>Nur <em>Haziq</em></h1>
     <p class="hero-desc">
       Digital Science student at Universiti Brunei Darussalam, graduating August 2026.
-      I build web applications that solve real problems. From sentiment analysis platforms
-      to civic reporting systems.
+      I build web applications that solve real problems, and I recently completed a
+      6-month IT internship at Brunei Shell Petroleum.
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn-primary">View Projects →</a>
@@ -458,10 +494,10 @@
       <div class="card-role">Digital Science · UBD · Brunei</div>
       <div class="card-chips">
         <span class="chip green"><i data-lucide="circle-check" style="width:12px;height:12px;vertical-align:middle;margin-right:4px"></i>Open to Work</span>
+        <span class="chip">Ex-BSP Intern</span>
         <span class="chip">Web Dev</span>
         <span class="chip">Python</span>
-        <span class="chip">JavaScript</span>
-        <span class="chip">Full Stack</span>
+        <span class="chip">Power BI</span>
       </div>
       <div class="card-stat">
         <div class="stat-item">
@@ -526,11 +562,36 @@
           <p>Youth Leadership Bootcamp · Teens in AI · Chess National Level</p>
         </div>
       </div>
-    </div>
-  </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="reveal">
+    <div class="section-tag">Experience</div>
+    <h2 class="section-title">Where I've worked</h2>
+    <p class="section-desc">
+      Real industry experience at one of Brunei's leading companies.
+    </p>
+  </div>
+  <div class="exp-card reveal">
+    <div class="exp-head">
+      <div class="exp-icon"><i data-lucide="building-2"></i></div>
+      <div class="exp-titles">
+        <h3>IT Intern, Industrial Attachment</h3>
+        <p class="exp-company">Brunei Shell Petroleum (BSP) · Information Services &amp; Technical Data Management</p>
+        <p class="exp-date">13 January – 28 July 2025</p>
+      </div>
+    </div>
+    <ul class="exp-list">
+      <li>Developed and presented 3 Power BI dashboards delivering actionable insights to the IT, Subsurface, and Technical Data Management teams</li>
+      <li>Served as instructor for an Introduction to Python class attended by the BSP ISW team and fellow IDC attachment students</li>
+      <li>Contributed to the BSP FIT Programme (Wave 1) and BSP EUCare through proof-of-concept work and end-user laptop deployment across BSP West, East, and Darat</li>
+      <li>Participated in 7 IDC HSSE site visits and authored 2 formal reports supporting risk mitigation efforts</li>
+      <li>Completed BSP Reservoir Engineering technical training and attended Halliburton and tNavigator workshops</li>
+      <li>Core committee member for the ISW Q2 2024 Away Day and supporting member for BSP Disrupt events and the IDC Amanah Kasih Charity Drive</li>
+    </ul>
+  </div>
+</section>
 <section id="projects">
   <div class="reveal">
     <div class="section-tag">Projects</div>
@@ -724,6 +785,13 @@
         <div>
           <div class="contact-label">Email</div>
           <div class="contact-value">hzqhsym12@gmail.com</div>
+        </div>
+      </a>
+      <a href="tel:+6738269912" class="contact-item">
+        <div class="contact-icon"><i data-lucide="smartphone"></i></div>
+        <div>
+          <div class="contact-label">Phone / WhatsApp</div>
+          <div class="contact-value">+673 8269912</div>
         </div>
       </a>
       <a href="https://github.com" target="_blank" class="contact-item">
